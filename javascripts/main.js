@@ -42,7 +42,11 @@ requirejs(
       familyMember.name = $("#name").val();
       familyMember.age = $("#age").val();
       familyMember.gender = $("#gender").val();
-      familyMember.skills = $("#skills").val();
+      skillsString = $("#skills").val();
+      skillsString = skillsString.replace(/,/g, "");
+      console.log("skillsString :", skillsString);
+      var skillsArray = skillsString.split(" ");
+      familyMember.skills = skillsArray;
       console.log("familyMember :", familyMember);
       add.add(familyMember);
     });
