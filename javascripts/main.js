@@ -49,6 +49,7 @@ requirejs(
       familyMember.skills = skillsArray;
       console.log("familyMember :", familyMember);
       add.add(familyMember);
+      $("input").val('');
     });
   }); 
 });  
